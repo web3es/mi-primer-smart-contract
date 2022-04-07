@@ -7,7 +7,7 @@ Este contrato fue programado en el stream de **web3es** el miércoles 30 de marz
 
 Creamos el Smart Contract inspirados en [Criptdle](https://www.criptdle.com/), el espectacular juego de [Solow](https://solow.io/) que nos propone adivinar y aprender una nueva palabra del mundo cripto cada día. 
 
-- Este Smart Contract permite agregar una nueva palabra a la lista de palabras dle juego
+- Este Smart Contract permite agregar una nueva palabra a la lista de palabras del juego
 - Y además nos deja ver/leer la lista de palabras
 
 ## Tecnologías y herramientas usadas
