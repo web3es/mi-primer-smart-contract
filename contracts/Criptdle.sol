@@ -1,19 +1,42 @@
 //SPDX-License-Identifier: Unlicense
 pragma solidity ^0.8.0;
 
-contract Criptdle {
-    
-    string[] words;                                   
+import "hardhat/console.sol";
 
-    constructor() {
+contract Criptdle {
+
+    address public owner;
+    
+    string[] wordsTexts;
+
+    struct word {
+        string text;
+        bool used;
+    }        
+
+    mapping(string=>word) public words;     
+
+    modifier Owner(address _address) {
+        require(_address == owner, "No tiene permisos para ejecutar esta operacion.");
+        _;
     }
 
-    function createWord(string memory _word) public {
-        words.push(_word);
+    constructor() {
+        owner = msg.sender;
+        console.log("La address owner del contrato es: ", owner);
+    }
+
+    function createWord(string memory _word) public Owner(msg.sender) {
+        words[_word] = word(_word, false);
+        wordsTexts.push(_word);
     }
 
     function readWords() public view returns(string[] memory) {
-        return words;
+        return wordsTexts;
+    }
+
+    function useWord(string memory _word) public Owner(msg.sender) {
+        words[_word] = word(_word, true);
     }
 }
 
