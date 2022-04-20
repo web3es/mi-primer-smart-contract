@@ -8,21 +8,26 @@ async function main() {
   console.log("Criptdle deployed to:", criptdle.address);
   /*
   let tx = await criptdle.createWord("wagmi");
-
   tx = await criptdle.createWord("shitcoin");
+  tx = await criptdle.createWord("solow");
+  tx = await criptdle.createWord("bitcoin");
+  tx = await criptdle.createWord("ethereum");
+  tx = await criptdle.createWord("rbtc");
+  tx = await criptdle.createWord("aave");
+  tx = await criptdle.createWord("hodl");
+  tx = await criptdle.createWord("solidity");
+  tx = await criptdle.createWord("fork");
 
-  tx = await criptdle.createWord("barrani");
-
-  tx = await criptdle.readWords();
-
+  tx = await criptdle.getWord();
   console.log(tx);
 
-  tx = await criptdle.useWord("wagmi");
+  tx = await criptdle.useWord("fork");
+  tx = await criptdle.isUsed("fork");
+  console.log(tx);
 
-  tx = await criptdle.words("wagmi");
+  tx = await criptdle.isUsed("solidity");
   console.log(tx);
   */
-
 }
 
 

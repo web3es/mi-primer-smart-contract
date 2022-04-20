@@ -38,5 +38,14 @@ contract Criptdle {
     function useWord(string memory _word) public Owner(msg.sender) {
         words[_word] = word(_word, true);
     }
+
+    function getWord() public view returns (string memory) {
+        uint random = block.timestamp % wordsTexts.length;
+        return wordsTexts[random];
+    }
+
+    function isUsed(string memory _word) public view returns (bool) {
+        return words[_word].used;
+    }
 }
 
